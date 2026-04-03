@@ -6,7 +6,7 @@ const Report = () => {
   const today = new Date().toISOString().split('T')[0];
 
   const fetchDailyReport = async () => {
-    // This endpoint should join CAR, SERVICE, and PAYMENT tables [cite: 49]
+  
     const res = await axios.get(`http://localhost:5000/api/reports/daily?date=${today}`);
     setReportData(res.data);
   };
@@ -15,7 +15,7 @@ const Report = () => {
 
   return (
     <div className="bg-white p-6 rounded shadow">
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex justify-between text-black items-center mb-6">
         <h2 className="text-2xl font-bold">Daily Sales Report</h2>
         <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded">Date: {today}</span>
       </div>

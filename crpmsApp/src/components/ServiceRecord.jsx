@@ -41,7 +41,7 @@ const ServiceRecord = () => {
 
   return (
     <div>
-      <div className="bg-white p-6 rounded-lg shadow mb-6">
+      <div className="bg-white p-6 rounded-lg text-black shadow mb-6">
         <h2 className="text-2xl font-bold mb-4">Register Repair Service</h2>
         <form onSubmit={handleSubmit} className="grid gap-4 md:grid-cols-2">
           <input
@@ -81,7 +81,7 @@ const ServiceRecord = () => {
         </form>
       </div>
 
-      <div className="bg-white p-6 rounded-lg shadow">
+      <div className="bg-white text-black p-6 rounded-lg shadow">
         <h2 className="text-2xl font-bold mb-4">Service Record History</h2>
         <div className="overflow-x-auto">
           <table className="min-w-full table-auto border-collapse border border-slate-200">

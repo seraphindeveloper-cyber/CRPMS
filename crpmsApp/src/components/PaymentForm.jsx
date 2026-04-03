@@ -21,7 +21,7 @@ const PaymentForm = () => {
 
   useEffect(() => {
     fetchServiceRecords();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    
   }, []);
 
   const handleRecordChange = (e) => {
@@ -57,7 +57,7 @@ const PaymentForm = () => {
 
   return (
     <div className="grid grid-cols-1 gap-8">
-      <div className="bg-white p-6 rounded shadow">
+      <div className="bg-white text-black p-6 rounded shadow">
         <h2 className="text-xl font-bold mb-4">Process Payment</h2>
         <form onSubmit={handlePayment} className="space-y-4">
           <label className="block">
