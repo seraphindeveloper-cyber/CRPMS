@@ -2,61 +2,58 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <div className="max-w-6xl mx-auto py-10 px-4 sm:px-6 lg:px-8">
-      <section className="rounded-[2rem] bg-slate-900/80 border border-slate-700 p-10 shadow-[0_40px_120px_rgba(15,23,42,0.25)] backdrop-blur-xl">
-        <div className="flex flex-col lg:flex-row gap-8 lg:items-center">
-          <div className="space-y-5 lg:w-2/3">
-            <span className="inline-flex items-center gap-2 rounded-full bg-cyan-500/10 px-4 py-2 text-cyan-300 text-sm font-medium">SMART PARK | CRPMS</span>
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight text-white">Manage Garage Repairs, Payments and Reports in One Place</h1>
-            <p className="text-slate-300 text-lg leading-8">Designed for SMART PARK garage in Rubavu, this interface replaces paper-based repair tracking with a polished digital workflow for car intake, repair services, payments, and daily reporting.</p>
-            <div className="flex flex-wrap gap-3">
-              <Link to="/car" className="rounded-full bg-cyan-500 px-6 py-3 text-sm font-semibold text-slate-950 hover:bg-cyan-400 transition">Register Car</Link>
-              <Link to="/service-record" className="rounded-full border border-slate-600 px-6 py-3 text-sm font-semibold text-slate-100 hover:bg-slate-800 transition">Service Records</Link>
-            </div>
-          </div>
-
-          <div className="rounded-[1.75rem] bg-slate-800/80 border border-slate-700 p-8 shadow-lg">
-            <p className="text-slate-400 uppercase tracking-[0.3em] text-xs mb-4">Core Actions</p>
-            <div className="grid gap-4">
-              <div className="rounded-3xl bg-slate-950/80 border border-cyan-500/20 p-5">
-                <h2 className="text-xl font-semibold text-white">Intake New Cars</h2>
-                <p className="mt-2 text-slate-400 text-sm">Capture plate, type, model, year, phone, mechanic and service details in one pass.</p>
-              </div>
-              <div className="rounded-3xl bg-slate-950/80 border border-emerald-500/20 p-5">
-                <h2 className="text-xl font-semibold text-white">Track Repairs</h2>
-                <p className="mt-2 text-slate-400 text-sm">Keep service records organized and easy to review.</p>
-              </div>
-              <div className="rounded-3xl bg-slate-950/80 border border-violet-500/20 p-5">
-                <h2 className="text-xl font-semibold text-white">Record Payments</h2>
-                <p className="mt-2 text-slate-400 text-sm">Process payments and generate official garage bills instantly.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div className="grid gap-5 mt-10 md:grid-cols-2">
-        <div className="rounded-[1.75rem] bg-slate-900/80 border border-slate-700 p-6 shadow-lg hover:-translate-y-1 transition-all">
-          <h2 className="text-xl font-semibold text-white mb-3">Car Intake</h2>
-          <p className="text-slate-400">Register license plate, type, model, year, driver phone, chief mechanic and requested service.</p>
-          <Link to="/car" className="mt-6 inline-flex items-center rounded-full bg-cyan-500 px-5 py-3 text-sm font-semibold text-slate-950 hover:bg-cyan-400 transition">Record new car</Link>
-        </div>
-        <div className="rounded-[1.75rem] bg-slate-900/80 border border-slate-700 p-6 shadow-lg hover:-translate-y-1 transition-all">
-          <h2 className="text-xl font-semibold text-white mb-3">Service Management</h2>
-          <p className="text-slate-400">View service history, open repair jobs, and keep track of pending work.</p>
-          <Link to="/service-record" className="mt-6 inline-flex items-center rounded-full bg-slate-800 px-5 py-3 text-sm font-semibold text-white hover:bg-slate-700 transition">Manage service records</Link>
-        </div>
-        <div className="rounded-[1.75rem] bg-slate-900/80 border border-slate-700 p-6 shadow-lg hover:-translate-y-1 transition-all">
-          <h2 className="text-xl font-semibold text-white mb-3">Payment Processing</h2>
-          <p className="text-slate-400">Select pending services, pay invoices and issue official receipts.</p>
-          <Link to="/payment" className="mt-6 inline-flex items-center rounded-full bg-emerald-500 px-5 py-3 text-sm font-semibold text-slate-950 hover:bg-emerald-400 transition">Process payments</Link>
-        </div>
-        <div className="rounded-[1.75rem] bg-slate-900/80 border border-slate-700 p-6 shadow-lg hover:-translate-y-1 transition-all">
-          <h2 className="text-xl font-semibold text-white mb-3">Reports</h2>
-          <p className="text-slate-400">Generate daily revenue insights and stay on top of workshop performance.</p>
-          <Link to="/report" className="mt-6 inline-flex items-center rounded-full bg-violet-500 px-5 py-3 text-sm font-semibold text-slate-950 hover:bg-violet-400 transition">View reports</Link>
-        </div>
+    <div className="w-full h-screen bg-gray-500">
+      <div className='p-5 bg-gray-700 text-white'>
+        <header>
+          <span className='text-3xl'>Car 🚘 </span><br />
+          <span>repair services</span>
+          <nav className='flex gap-5 text-2xl flex-row-reverse'>
+            <Link to="#">Contact</Link>
+            <Link to="#">Services</Link>
+            <Link to="#">Car</Link>
+          </nav>
+        </header>
       </div>
+ <main className="flex flex-col items-center justify-center text-center min-h-[70vh] px-4">
+
+  <h1 className="text-4xl text-white md:text-5xl font-bold mb-4">
+    Reliable Car Repair & Payment Management 
+  </h1>
+
+  <p className="text-gray-800 max-w-xl mb-6 text-lg">
+    We provide high-quality repair services for your car while helping you 
+    easily track service records, manage payments, and stay organized—all in one place.
+  </p>
+
+  <div className="flex gap-4">
+    <button className="bg-gray-600 hover:bg-gray-800 text-white px-6 py-2 rounded transition">
+      Book Service
+    </button>
+
+    <button className="bg-gray-300 hover:bg-gray-400 text-black px-6 py-2 rounded transition">
+      View Records
+    </button>
+  </div>
+
+  <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-gray-400">
+    <div>
+      <h3 className="font-semibold text-white">🔧 Expert Repairs</h3>
+      <p>Certified technicians ensure quality service</p>
+    </div>
+
+    <div>
+      <h3 className="font-semibold text-white">💳 Easy Payments</h3>
+      <p>Track and manage all your transactions</p>
+    </div>
+
+    <div>
+      <h3 className="font-semibold text-white">📊 Smart Tracking</h3>
+      <p>Monitor your car history and service records</p>
+    </div>
+  </div>
+
+</main>
+
     </div>
   );
 };
