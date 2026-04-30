@@ -38,7 +38,7 @@ const handleSubmit = async (event) => {
 
   return (
     <div className="flex items-center justify-center min-h-screen">
-      <form onSubmit={handleSubmit} className=" p-6 rounded shadow -mt-40 w-80 flex flex-col gap-3">
+      <form onSubmit={handleSubmit} className="border-2 p-6 rounded shadow -mt-40 w-80 flex flex-col gap-3">
         <h2 className="text-xl font-bold text-center">Login</h2>
 
         <input

@@ -7,16 +7,13 @@ import axios from 'axios'
 
   function Registration() {
     const [user_name, setUsername] = useState('');
-    const [role, setRole] = useState('');
     const [password, setPassword] = useState('');
     const navigate= useNavigate();
 
     const handleUsername = (event) => {
       setUsername(event.target.value);
     };
-    const handleRole = (event) => {
-      setRole(event.target.value)
-    };
+
     const handlePassword = (event) => {
       setPassword(event.target.value)
     };
@@ -26,11 +23,10 @@ import axios from 'axios'
       try {
         const res = await axios.post('http://localhost:3000/Registration',{
           user_name,
-          role,
           password
         });
         if (res.data) {
-          navigate('/home');
+          navigate('/Login');
         }
       }
       catch(error){
@@ -50,10 +46,6 @@ import axios from 'axios'
             <input onChange={handleUsername} className="border rounded-md px-3 py-2 outline-blue-500" type="text" id="username" name="user_name" required />
           </div>
 
-          <div className="flex flex-col gap-1">
-            <label className="text-sm font-medium text-gray-700" htmlFor="role">Role</label>
-            <input onChange={handleRole} className="border rounded-md px-3 py-2 outline-blue-500" type="text" id="role" name="role" required />
-          </div>
 
           <div className="flex flex-col gap-1">
             <label className="text-sm font-medium text-gray-700" htmlFor="password">Password</label>

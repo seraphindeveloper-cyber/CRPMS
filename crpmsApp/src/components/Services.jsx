@@ -15,16 +15,16 @@ function Services() {
   }, []);
 
   return (
-    <div className="p-6">
+    <div className="p-6 text-center">
       <h2 className="text-2xl font-bold mb-4">Services List</h2>
 
       <table className="w-full border">
         <thead>
-          <tr className="bg-gray-200 text-black">
-            <th className="p-2">Code</th>
-            <th className="p-2">Name</th>
-            <th className="p-2">Price</th>
-            <th className="p-2">Car Plate</th>
+          <tr className=" text-amber-950 border-2 border-amber-950 bg-gray-500">
+            <th className="p-2">serviceCode</th>
+            <th className="p-2">serviceName</th>
+            <th className="p-2">servicePrice</th>
+            <th className="p-2">served Car Plate</th>
           </tr>
         </thead>
 
