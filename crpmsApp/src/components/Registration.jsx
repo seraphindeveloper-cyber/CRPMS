@@ -26,12 +26,12 @@ import axios from 'axios'
           password
         });
         if (res.data) {
-          navigate('/Login');
+          navigate('/Home');
         }
       }
       catch(error){
         console.error(error);
-        alert('failed to register');
+        alert('Username already exists');
       }
       
   };

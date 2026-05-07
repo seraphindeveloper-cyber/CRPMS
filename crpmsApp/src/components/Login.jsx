@@ -29,10 +29,11 @@ const handleSubmit = async (event) => {
   });
   const data = await res.json()
   if (data.success) {
+    localStorage.setItem("user", JSON.stringify(data.user));
     navigate('/Home')
   }
   else{
-    alert(data.message)
+  alert(data.message);
   }
 }
 
@@ -61,6 +62,8 @@ const handleSubmit = async (event) => {
 
         <input type='submit' className="bg-blue-500 text-white py-2 rounded" />
         <Link to="/Registration">
+        
+        <hr />
          <span className='text-amber-700'>create an account</span></Link>
       </form>
       <Outlet />

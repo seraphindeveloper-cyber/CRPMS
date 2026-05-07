@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Header from "./Header";
+import Footer from './Footer';
 
 function Services() {
   const [services, setServices] = useState([]);
@@ -15,7 +17,10 @@ function Services() {
   }, []);
 
   return (
+    <>
+    <Header />
     <div className="p-6 text-center">
+      
       <h2 className="text-2xl font-bold mb-4">Services List</h2>
 
       <table className="w-full border">
@@ -40,6 +45,8 @@ function Services() {
         </tbody>
       </table>
     </div>
+    <Footer />
+    </>
   );
 }
 
